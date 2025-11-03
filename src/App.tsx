@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { BirthDateInput } from './components/BirthDateInput';
 import { ViewSwitcher } from './components/ViewSwitcher';
+import { DayView } from './components/DayView';
+import { WeekView } from './components/WeekView';
 import { getAge, formatDate } from './utils/dateHelpers';
 import type { CalendarView } from './types/calendar';
 
 function App() {
   const [birthDate, setBirthDate] = useState<Date | null>(null);
-  const [currentDate] = useState<Date>(new Date());
+  const [currentDate, setCurrentDate] = useState<Date>(new Date());
   const [currentView, setCurrentView] = useState<CalendarView>('month');
 
   const handleBirthDateSubmit = (date: Date) => {
@@ -55,19 +57,49 @@ function App() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-8 min-h-96">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              {currentView.charAt(0).toUpperCase() + currentView.slice(1)} View
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400">
-              {currentView === 'day' && 'Daily calendar view will be implemented here'}
-              {currentView === 'week' && 'Weekly calendar view will be implemented here'}
-              {currentView === 'month' && 'Monthly calendar view will be implemented here'}
-              {currentView === 'year' && 'Yearly calendar view will be implemented here'}
-              {currentView === 'lifetime' && 'Lifetime calendar view will be implemented here'}
-            </p>
-          </div>
+        <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md min-h-96 flex flex-col">
+          {currentView === 'day' && (
+            <DayView currentDate={currentDate} onDateChange={setCurrentDate} />
+          )}
+          {currentView === 'week' && (
+            <WeekView currentDate={currentDate} onDateChange={setCurrentDate} />
+          )}
+          {currentView === 'month' && (
+            <div className="p-8">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  Month View
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Monthly calendar view will be implemented here
+                </p>
+              </div>
+            </div>
+          )}
+          {currentView === 'year' && (
+            <div className="p-8">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  Year View
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Yearly calendar view will be implemented here
+                </p>
+              </div>
+            </div>
+          )}
+          {currentView === 'lifetime' && (
+            <div className="p-8">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  Lifetime View
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Lifetime calendar view will be implemented here
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </main>
     </div>
