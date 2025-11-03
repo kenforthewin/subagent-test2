@@ -3,6 +3,8 @@ import { BirthDateInput } from './components/BirthDateInput';
 import { ViewSwitcher } from './components/ViewSwitcher';
 import { DayView } from './components/DayView';
 import { WeekView } from './components/WeekView';
+import { MonthView } from './components/MonthView';
+import { YearView } from './components/YearView';
 import { getAge, formatDate } from './utils/dateHelpers';
 import type { CalendarView } from './types/calendar';
 
@@ -65,28 +67,10 @@ function App() {
             <WeekView currentDate={currentDate} onDateChange={setCurrentDate} />
           )}
           {currentView === 'month' && (
-            <div className="p-8">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Month View
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Monthly calendar view will be implemented here
-                </p>
-              </div>
-            </div>
+            <MonthView currentDate={currentDate} onDateChange={setCurrentDate} birthDate={birthDate!} />
           )}
           {currentView === 'year' && (
-            <div className="p-8">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Year View
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Yearly calendar view will be implemented here
-                </p>
-              </div>
-            </div>
+            <YearView currentDate={currentDate} onDateChange={setCurrentDate} birthDate={birthDate!} />
           )}
           {currentView === 'lifetime' && (
             <div className="p-8">
