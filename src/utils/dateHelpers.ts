@@ -1,4 +1,4 @@
-import { format, differenceInYears, isToday as isTodayFns, isSameDay as isSameDayFns } from 'date-fns';
+import { format, differenceInYears, isToday as isTodayFns, isSameDay as isSameDayFns, differenceInWeeks } from 'date-fns';
 
 /**
  * Calculate the current age in years based on birth date
@@ -42,5 +42,26 @@ export function isToday(date: Date): boolean {
  */
 export function isSameDay(date1: Date, date2: Date): boolean {
   return isSameDayFns(date1, date2);
+}
+
+/**
+ * Calculate total weeks lived from birth date to now
+ */
+export function getWeeksLived(birthDate: Date): number {
+  return differenceInWeeks(new Date(), birthDate);
+}
+
+/**
+ * Get the current year
+ */
+export function getCurrentYear(): number {
+  return new Date().getFullYear();
+}
+
+/**
+ * Get the birth year from a birth date
+ */
+export function getBirthYear(birthDate: Date): number {
+  return birthDate.getFullYear();
 }
 

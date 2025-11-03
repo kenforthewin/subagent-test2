@@ -5,6 +5,7 @@ import { DayView } from './components/DayView';
 import { WeekView } from './components/WeekView';
 import { MonthView } from './components/MonthView';
 import { YearView } from './components/YearView';
+import { LifetimeView } from './components/LifetimeView';
 import { getAge, formatDate } from './utils/dateHelpers';
 import type { CalendarView } from './types/calendar';
 
@@ -73,16 +74,7 @@ function App() {
             <YearView currentDate={currentDate} onDateChange={setCurrentDate} birthDate={birthDate!} />
           )}
           {currentView === 'lifetime' && (
-            <div className="p-8">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Lifetime View
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lifetime calendar view will be implemented here
-                </p>
-              </div>
-            </div>
+            <LifetimeView birthDate={birthDate!} currentDate={currentDate} />
           )}
         </div>
       </main>
