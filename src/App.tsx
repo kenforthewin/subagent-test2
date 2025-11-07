@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { Counter } from './components/Counter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -154,6 +155,32 @@ function App() {
                 {device}
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Counter Widgets Section */}
+        <section className="mt-20 pt-20 border-t border-purple-500/20">
+          <h2 className="text-3xl font-bold text-white mb-8">Reusable Counter Widgets</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl">
+            Showcase of the flexible Counter component with different configurations. Each widget demonstrates different props for a customizable experience.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+            <Counter
+              title="Basic Counter"
+              initialValue={0}
+            />
+            <Counter
+              title="Counter with Min/Max"
+              initialValue={5}
+              minValue={0}
+              maxValue={10}
+            />
+            <Counter
+              title="High Range Counter"
+              initialValue={50}
+              minValue={0}
+              maxValue={100}
+            />
           </div>
         </section>
 
