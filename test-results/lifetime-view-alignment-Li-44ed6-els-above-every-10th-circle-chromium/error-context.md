@@ -1,0 +1,113 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - generic [ref=e7]: React + Vite + Tailwind
+      - generic [ref=e8]:
+        - link "Vite" [ref=e9] [cursor=pointer]:
+          - /url: https://vite.dev
+        - generic [ref=e10]: •
+        - link "React" [ref=e11] [cursor=pointer]:
+          - /url: https://react.dev
+        - generic [ref=e12]: •
+        - link "Tailwind" [ref=e13] [cursor=pointer]:
+          - /url: https://tailwindcss.com
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - link "Vite logo" [ref=e17] [cursor=pointer]:
+          - /url: https://vite.dev
+          - img "Vite logo" [ref=e18]
+        - link "React logo" [ref=e19] [cursor=pointer]:
+          - /url: https://react.dev
+          - img "React logo" [ref=e20]
+      - heading "Build Fast Style Beautiful" [level=1] [ref=e21]:
+        - text: Build Fast
+        - text: Style Beautiful
+      - paragraph [ref=e22]: A modern React development stack with Vite's lightning-fast HMR and Tailwind CSS for utility-first styling. Built with TypeScript for type safety and best practices.
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]: ⚡
+          - heading "Lightning Fast" [level=3] [ref=e26]
+          - paragraph [ref=e27]: Vite provides instant server start and sub-millisecond HMR for rapid development.
+        - generic [ref=e28]:
+          - generic [ref=e29]: 🎨
+          - heading "Beautiful Design" [level=3] [ref=e30]
+          - paragraph [ref=e31]: Tailwind CSS v4 with utility classes for rapid UI development and design consistency.
+        - generic [ref=e32]:
+          - generic [ref=e33]: 🔒
+          - heading "Type Safe" [level=3] [ref=e34]
+          - paragraph [ref=e35]: TypeScript integration ensures type safety and improved developer experience.
+      - generic [ref=e36]:
+        - heading "Interactive Counter" [level=2] [ref=e37]
+        - generic [ref=e38]:
+          - button "−" [ref=e39]
+          - generic [ref=e40]: "0"
+          - button "+" [ref=e41]
+        - button "Reset" [ref=e42]
+    - generic [ref=e43]:
+      - heading "Responsive Design" [level=2] [ref=e44]
+      - generic [ref=e45]:
+        - generic [ref=e46]: Mobile
+        - generic [ref=e47]: Tablet
+        - generic [ref=e48]: Laptop
+        - generic [ref=e49]: Desktop
+    - generic [ref=e50]:
+      - heading "Reusable Counter Widgets" [level=2] [ref=e51]
+      - paragraph [ref=e52]: Showcase of the flexible Counter component with different configurations. Each widget demonstrates different props for a customizable experience.
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - heading "Basic Counter" [level=3] [ref=e55]
+          - generic [ref=e56]:
+            - button "−" [disabled] [ref=e57]
+            - generic [ref=e58]: "0"
+            - button "+" [ref=e59]
+          - button "Reset" [ref=e60]
+        - generic [ref=e61]:
+          - heading "Counter with Min/Max" [level=3] [ref=e62]
+          - generic [ref=e63]:
+            - button "−" [ref=e64]
+            - generic [ref=e65]: "5"
+            - button "+" [ref=e66]
+          - button "Reset" [ref=e67]
+        - generic [ref=e68]:
+          - heading "High Range Counter" [level=3] [ref=e69]
+          - generic [ref=e70]:
+            - button "−" [ref=e71]
+            - generic [ref=e72]: "50"
+            - button "+" [ref=e73]
+          - button "Reset" [ref=e74]
+    - generic [ref=e75]:
+      - heading "Getting Started" [level=2] [ref=e76]
+      - generic [ref=e77]:
+        - paragraph [ref=e78]:
+          - text: This project demonstrates a modern React development setup with Vite and Tailwind CSS. You can edit
+          - code [ref=e79]: src/App.tsx
+          - text: and see your changes instantly thanks to Vite's Hot Module Replacement (HMR).
+        - generic [ref=e80]:
+          - paragraph [ref=e81]:
+            - text: 📝
+            - strong [ref=e82]: "Edit:"
+            - code [ref=e83]: src/App.tsx
+            - text: to customize the app
+          - paragraph [ref=e84]:
+            - text: 🎨
+            - strong [ref=e85]: "Style:"
+            - text: Use Tailwind utility classes for rapid styling
+          - paragraph [ref=e86]:
+            - text: ⚡
+            - strong [ref=e87]: "Develop:"
+            - text: Run
+            - code [ref=e88]: npm run dev
+            - text: for instant feedback
+          - paragraph [ref=e89]:
+            - text: 📦
+            - strong [ref=e90]: "Build:"
+            - text: Run
+            - code [ref=e91]: npm run build
+            - text: for production
+  - contentinfo [ref=e92]:
+    - paragraph [ref=e94]: Built with React, Vite, and Tailwind CSS v4 • 2025
+```
