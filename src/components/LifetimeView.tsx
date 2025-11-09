@@ -187,11 +187,13 @@ function LifetimeDot({
   return (
     <div className="flex flex-col items-center relative group">
       {/* Decade label above every 10th dot */}
-      {showDecadeLabel && (
-        <div className="text-xs font-bold text-gray-400 dark:text-gray-500 mb-2 h-4">
-          {age}
-        </div>
-      )}
+      <div className="h-4 mb-2">
+        {showDecadeLabel && (
+          <span className="text-xs font-bold text-gray-400 dark:text-gray-500">
+            {age}
+          </span>
+        )}
+      </div>
       
       <button
         onMouseEnter={onHover}
